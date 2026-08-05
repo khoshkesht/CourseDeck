@@ -1,0 +1,22 @@
+{
+  "name": "iraneurope",
+  "version": "1.0.0",
+  "description": "اپ اندروید ساده برای پخش فایل‌های صوتی دسته‌بندی‌شده در فولدرها.",
+  "main": "app.js",
+  "scripts": {
+    "generate-library": "node scripts/generate-library.js assets",
+    "serve": "node scripts/server.js 8000",
+    "prepare-capacitor": "node scripts/prepare-capacitor.js",
+    "patch-gradle": "node scripts/patch-gradle.js",
+    "cap:sync": "npm run generate-library && npm run prepare-capacitor && npm run patch-gradle",
+    "cap:open": "npx cap open android"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^7.6.8",
+    "@capacitor/cli": "^7.6.8",
+    "@capacitor/core": "^7.6.8"
+  }
+}

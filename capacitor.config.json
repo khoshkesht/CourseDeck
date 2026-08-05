@@ -1,0 +1,8 @@
+{
+  "appId": "com.iraneurope.audioplayer",
+  "appName": "Audio Player",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

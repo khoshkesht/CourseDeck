@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>پخش صوت</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <img class="app-logo" src="assets/branding/app-logo-160.png" alt="">
+        <div>
+          <h1 id="pageTitle">پخش صوت</h1>
+          <p id="pageSubtitle">در حال بارگذاری</p>
+        </div>
+        <button id="backButton" class="icon-button hidden" type="button" aria-label="برگشت">‹</button>
+        <button id="aboutButton" class="icon-button" type="button" aria-label="درباره">i</button>
+      </header>
+
+      <section id="pdfLinks" class="pdf-links" aria-label="کتاب‌ها">
+      </section>
+
+      <section id="emptyState" class="empty-state hidden">
+        <h2>هنوز فایلی پیدا نشد</h2>
+        <p>فایل‌های صوتی را داخل فولدر <span id="emptyBasePath">assets</span> بگذار و فهرست را بساز.</p>
+      </section>
+
+      <section id="folderView" class="list-view" aria-label="جلسه‌ها"></section>
+      <section id="trackView" class="list-view track-mode hidden" aria-label="فایل‌ها"></section>
+    </main>
+
+    <section id="playerSheet" class="player-sheet hidden" aria-label="پخش کننده">
+      <button id="closePlayerButton" class="sheet-close-button" type="button" aria-label="بستن">×</button>
+      <div class="player-grip"></div>
+      <div class="player-title" id="playerTitle">-</div>
+      <div class="player-folder" id="playerFolder">-</div>
+      <input id="seekBar" class="seek-bar" type="range" min="0" max="1000" value="0" step="1" aria-label="خط پخش">
+      <div class="time-row">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="player-controls">
+        <button id="rewindButton" class="round-button" type="button" aria-label="ده ثانیه عقب">-۱۰</button>
+        <button id="playPauseButton" class="play-button" type="button" aria-label="پخش">▶</button>
+        <button id="forwardButton" class="round-button" type="button" aria-label="ده ثانیه جلو">+۱۰</button>
+      </div>
+      <audio id="audioPlayer" preload="metadata"></audio>
+    </section>
+
+    <section id="notesSheet" class="notes-sheet hidden" aria-label="جزئیات جلسه">
+      <button id="closeNotesButton" class="sheet-close-button" type="button" aria-label="بستن">×</button>
+      <div class="player-grip"></div>
+      <div class="notes-title" id="notesTitle">-</div>
+      <ul id="notesList" class="notes-list"></ul>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
