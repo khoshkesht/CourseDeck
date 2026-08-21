@@ -309,6 +309,7 @@ function closeNotes() {
 }
 
 function playTrack(folder, track) {
+  elements.audioPlayer.loop = true;
   elements.audioPlayer.src = buildAudioSrc(track.src);
   elements.playerTitle.textContent = track.title;
   elements.playerFolder.textContent = folder.title;
