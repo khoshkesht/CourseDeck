@@ -409,7 +409,10 @@ elements.audioPlayer.addEventListener("pause", () => {
   elements.playPauseButton.textContent = "▶";
 });
 elements.audioPlayer.addEventListener("ended", () => {
-  elements.playPauseButton.textContent = "▶";
+  elements.audioPlayer.currentTime = 0;
+  elements.audioPlayer.play().catch(() => {
+    elements.playPauseButton.textContent = "▶";
+  });
 });
 
 loadCourse().then(loadLibrary);
