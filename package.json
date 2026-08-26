@@ -1,6 +1,6 @@
 {
   "name": "iraneurope",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "اپ اندروید ساده برای پخش فایل‌های صوتی دسته‌بندی‌شده در فولدرها.",
   "main": "app.js",
   "scripts": {
